@@ -1,11 +1,4 @@
-// const http = require('http');
-//
-// http
-//   .createServer((req, res) => {
-//     res.writeHead(200, { 'Content-Type': 'text/html' });
-//     res.end('Is this working!');
-//   })
-//   .listen(process.env.PORT || 8080);
+require('dotenv').config();
 
 const path = require('path');
 const express = require('express');
@@ -21,4 +14,5 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.listen(process.env.PORT || 8080, () => console.log('app is running on port 8080'));
+app.listen(process.env.PORT || process.env.LOCAL_PORT, () =>
+  console.log(`app is running on port ${process.env.LOCAL_PORT}`));
