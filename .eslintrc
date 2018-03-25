@@ -1,0 +1,6 @@
+{
+  "extends": ["prettier","airbnb"],
+  "rules": {
+    "func-names": ["error", "never"]
+  }
+}
